@@ -1,0 +1,249 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"> </script>
+    <link rel="stylesheet" href="/css/agendamientoadmin.css">
+    <title>Administrador EL</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <h4>Electrolujos / TuProyectoEs</h4>
+        <div class="profile">
+            <span class="fas fa-search"></span>
+            <img class="profile-image" src="https://picsum.photos/200/200?random=1">
+            <p class="profile-name">Administrador</p>
+        </div>
+    </nav>
+
+    <input type="checkbox" id="toggle">
+    <label class="side-toggle" for="toggle"><span class="bx bx-menu"></span></label>
+
+    <div class="slidebar">
+      <a href="/Administrador">
+        <div class="slidebar-menu" id="sidebar">
+            <span  class='bx bxs-home' ></span><p>INICIO</p>
+        </div>
+      </a>  
+       <a href="#">
+       <div class="slidebar-menu">
+            <span class="bx bxs-user"></span><p>Usuarios</p>
+        </div>
+       </a>
+       <a href="#">
+        <div class="slidebar-menu">
+            <span  class='bx bxs-shopping-bags'></span><p>Productos</p>
+        </div>
+       </a>
+       <a href="#">
+        <div class="slidebar-menu">
+            <span  class="bx bx-shopping-bag"></span><p>Categorias</p>
+        </div>
+       </a>
+       <a href="#">
+        <div class="slidebar-menu">
+            <span class='bx bx-message-rounded-error' ></span><p>PQR</p>
+        </div>
+       </a>
+       <a href="#">
+        <div class="slidebar-menu">
+            <span  class='bx bxs-map-pin'></span><p>Citas</p>
+        </div>
+       </a>
+        <a href="#">
+        <div class="slidebar-menu">
+            <span  class='bx bxs-truck'></span><p>Flota</p>
+        </div>
+       </a>
+       <a href="/">
+        <div class="slidebar-menu">
+            <span  class='bx bx-log-out-circle' ></span><p>Salir</p>
+        </div>
+       </a>
+    </div>
+
+    <main>        
+        <div class="dashboard-container">
+            <div class="card total1">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Vehículos</h3>
+                        <p>Control de flota</p>
+                        <h2>09 <span>Disponibles</span></h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="bx bxs-car"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card total2">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Citas</h3>
+                        <p>Citas Vigentes</p>
+                        <h2>10 <span>Agendadas</span></h2>
+                    </div>
+                    <div class="info-image1">
+                        <i class='bx bxs-calendar'></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="card total3">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Productos</h3>
+                        <p>Con existencia en inventario</p>
+                        <h2>1059 <span>Productos</span></h2>
+                    </div>
+                    <div class="info-image">
+                        <i class='bx bx-barcode-reader'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card total4">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Usuarios</h3>
+                        <p>Registrados en el sistema</p>
+                        <h2>12 <span>Usuarios</span></h2>
+                    </div>
+                    <div class="info-image1">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                </div>
+            </div>
+
+
+    <div class="card detail">
+                <div class="detail-header">
+                    <h2>Agendamientos registrados</h2>
+                </div>
+                <table class="tableAdmin">
+   
+   <tr>
+     
+        <td id="encabezadoT" >Título</td>
+        <td id="encabezadoD" >Descripcion</td>
+        <td id="encabezado" >Fecha de Inicio</td>
+        <td id="encabezado" >Fecha de Fin</td>
+        <td id="encabezado" >Hora de Inicio</td>
+        <td id="encabezadoB" >Editar</td>
+        <td id="encabezadoB" >Realizado</td>
+    </tr>
+    <tr>
+        <td id="camposT">Cambio de aceite</Atd>
+        <td id="camposD">Cambio de aceite y filtro para vehículo particular</td>
+        <td id="campos">2025-01-10</td>
+        <td id="campos">2025-01-10</td>
+        <td id="campos">08:00</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Revisión de frenos</Atd>
+        <td id="camposD">Inspección y ajuste del sistema de frenos</td>
+        <td id="campos">2025-01-10</td>
+        <td id="campos">2025-01-10</td>
+        <td id="campos">09:30</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Alineación y balanceo</Atd>
+        <td id="camposD">Servicio de alineación y balanceo de llantas</td>
+        <td id="campos">2025-01-11</td>
+        <td id="campos">2025-01-11</td>
+        <td id="campos">10:00</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Diagnóstico eléctrico</Atd>
+        <td id="camposD">Revisión de fallas eléctricas del vehículo</td>
+        <td id="campos">2025-01-11</td>
+        <td id="campos">2025-01-11</td>
+        <td id="campos">11:30</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Mantenimiento preventivo</Atd>
+        <td id="camposD">Revisión general y mantenimiento básico</td>
+        <td id="campos">2025-01-12</td>
+        <td id="campos">2025-01-12</td>
+        <td id="campos">08:30</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Cambio de batería</Atd>
+        <td id="camposD">Reemplazo de batería agotada</td>
+        <td id="campos">2025-01-12</td>
+        <td id="campos">2025-01-12</td>
+        <td id="campos">09:45</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Reparación de suspensión</Atd>
+        <td id="camposD">Reparación de amortiguadores y suspensión</td>
+        <td id="campos">2025-01-13</td>
+        <td id="campos">2025-01-13</td>
+        <td id="campos">10:15</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Revisión de aire acondicionado</Atd>
+        <td id="camposD">Diagnóstico y recarga de gas refrigerante</td>
+        <td id="campos">2025-01-13</td>
+        <td id="campos">2025-01-13</td>
+        <td id="campos">11:00</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Cambio de llantas</Atd>
+        <td id="camposD">Cambio de dos llantas delanteras</td>
+        <td id="campos">2025-01-14</td>
+        <td id="campos">2025-01-14</td>
+        <td id="campos">08:00</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Diagnóstico de motor</Atd>
+        <td id="camposD">Escaneo y diagnóstico de fallas del motor</td>
+        <td id="campos">2025-01-14</td>
+        <td id="campos">2025-01-14</td>
+        <td id="campos">09:30</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+        <tr>
+        <td id="camposT">Servicio de frenos completos</Atd>
+        <td id="camposD">Cambio de pastillas y rectificación de discos</td>
+        <td id="campos">2025-01-15</td>
+        <td id="campos">2025-01-15</td>
+        <td id="campos">10:45</td>
+        <td id="camposB"><a href="#"><i class='bx bxs-edit' id='icono1'></i></a></td>
+        <td id="camposB"><a href="#"><i class='bx bx-check-square' id='icono2'></i></a></td>
+    </tr>
+
+   </table>
+            </div>
+        
+
+    </main>
+
+</body>
+</html>

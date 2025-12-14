@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>Electrolujos / TuProyectoEs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="/css/styleU.css">
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"> </script>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  
+    </head>
+    <body>    
+        <body>
+            <div class="container">
+                <h1  class="titulo">Electrolujos/TuProyectoEs</h1>
+                <hr width="100%">
+
+                 <br>
+
+                 <header class="header">
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                    <nav class="navbar">
+                    </nav>
+                   <div class="ingreso">
+                    <div id="login">
+                        <button class="btn">Iniciar sesión
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                        </button>
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div id="sign">
+                        <button class="btn">Registrarse
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                        </button>
+                    </div>
+                    <a href="/" id="abcd">
+                        <button class="btn">Inicio
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                        </button>
+                    </a>
+                    </div>
+                </header>
+        <div class="login-form-container">
+            <span class="bxr  bx-no-entry" id="close-login-form"></span>
+            <form action="/Cliente">
+                <h3>Iniciar sesión</h3>
+                 <h1 class="h">Correo electronico</h1>
+                 <input type="email" placeholder="Ingrese su correo electronico" name="correoElectronico" class="box" required>
+                 <h1 class="h">Contraseña</h1>
+                 <input type="password" placeholder="Ingrese su contraseña" name="contrasena" class="box" required>
+                 <input type="submit" value="Ingresar" class="btn">
+                 <p>Olvido su contraseña. <a href="#"> Click aquí</a></p>
+                 <p>No tiene una cuenta registrada. <a href="/Unirse">Cree una</a></p> 
+            </form>
+        </div>
+    
+        <div class="sign-form-container">
+            <span class="bxr  bx-no-entry" id="close-sign-form"></span>
+            <form id="formR" action="#">
+                <h3>Registrarse</h3>
+                <h1 class="h">Nombre</h1>
+                <input type="text" placeholder="Ingrese su Nombre" name="nombre"  value="" class="box" required>
+                 <h1 class="h">Apellido</h1>
+                 <input type="text" placeholder="Ingrese su Apellido" name="apellido" value="" class="box" required >
+                 <h1 class="h">Numero de documento</h1>
+                 <input type="number" placeholder="Ingrese su numero de id" name="identificacion"  value="" class="box" required>
+                 <h1 class="h">Numero de telefono</h1>
+                 <input type="number" placeholder="Ingrese su numero de telefonico" name="telefono" value="" class="box" required>
+                 <h1 class="h">Correo electronico</h1>
+                 <input type="email" placeholder="Ingrese su correo electronico" name="correoElectronico" value="" class="box" required >
+                  <h1 class="h">Dirección</h1>
+                 <input type="text" placeholder="Ingrese su direccion postal" name="direccionUsuario" value="" class="box" required>        
+                 <h1 class="h">Contraseña</h1>
+                 <input type="password" id="password" placeholder="Ingrese su contraseña" name="contraseña" value="" class="box" required>
+                 
+                 <input type="submit" id="confirmar" value="Registrarse" name="registrar" class="btn">
+            </form>
+        </div>
+
+        </body>
+        <script src="/js/script.js"></script>
+        <script>
+
+            let btn = document.getElementById("confirmar");
+            btn.addEventListener("click", function(e){ 
+
+                    //function validar(){
+
+                        var contrasena, expresion;
+                        contrasena=document.getElementById("password").value;
+                        var caracteres=0;
+                        var errores=0;
+                        expresion = /\w/;/// a-z // 0 9
+
+                        if(contrasena.length<7){
+                            alert("La contraseña debe tener mas de 7 caracteres");
+                            errores=errores+1;
+                            e.preventDefault();
+                        // return true;
+                        }
+                        //if(!expresion.test(contrasena)){
+                        if(!contrasena.indexOf("*")){///victor*moreno*
+                            alert("Contraseña invalida, recuerde que debe tener una longitud de 8 letras o numeros");
+                        
+                            errores=errores+1;
+                            e.preventDefault();
+                           
+                        }else if(errores=0){
+                            alert("La contraseña se creo con exito y todos los campos estan correctos");
+                            return true;
+                        }
+                
+
+               /*// if(!contrasena.equals(contrasena.toUpperCase())){
+                //    alert("La contraseña debe tener 1 letra minuscula");
+                //}
+                //hola=alert("la contraseña tiene"+caracteres);
+                //return hola;
+                if(contrasena == contrasena.toUpperCase()){
+                    errores=errores+1;
+                }
+                if(contrasena == contrasena.toLowwerCase()){
+                    errores=errores+1;
+                }
+                if(errores>1){
+                    alert("La contraseña es incorrecta");
+                    return true;
+                }*/
+            //}
+        }); 
+
+           /* $(function(){
+
+                var mayus = new RegExp("^(?=.∗[A-Z].∗[A-Z].∗[A-Z])");
+                var special = new RegExp("^(?=.∗[!@#$%&∗].∗[!@#$%&∗].∗[!@#$%&∗)");
+                var numbers = new RegExp("^(?=.∗[0-9])");
+                var lower = new RegExp("^(?=.∗[a-z])");
+                var len = new RegExp("^(?=.{8,})");
+
+                var regExp=[mayus,special,numbers,lower,len];
+               // var elementos=[$("#mayus"),$("#special"),$("#numbers"),$("#lower"),$("#len")];
+                
+                $("#password").on("Keyup", function(){
+                    var pass = $("#password").val();
+                    var check=0;
+                    for(var i=0; i<5; i++){
+                        if(regExp[i].test(pass)){
+                          //  elementos[i].hide();
+                            check++
+                        }else{
+                            //elementos[i].show();
+                        }
+                    }
+                    if(check>=0 && check<=2){
+                        $("#mensaje").text("Contraseña insegura, longitud recomendada 8 caracteres").css("color","red");
+                        $("#confirmar").style.display="none";
+                    }else if(check>=3 && check<=4){
+                        $("#mensaje").text("Contraseña poco insegura, longitud recomendada 8 caracteres").css("color","orange");
+                        $("#confirmar").style.display="none";
+                    }else if(check==5){
+                        $("#mensaje").text("Contraseña Segura").css("color","green")
+                        $("#confirmar").style.display="block";
+                    }
+
+                });
+
+            });*/
+
+
+        </script>
+    </head>
